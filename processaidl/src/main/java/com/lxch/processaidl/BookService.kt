@@ -26,9 +26,8 @@ class BookService : Service() {
 
         override fun addBook(book: Book?) {
             book?.let { list.add(it) }
-            Toast.makeText(applicationContext, "dd", Toast.LENGTH_LONG).show()
-
             h.sendEmptyMessage(0)
+            Toast.makeText(applicationContext, "dd", Toast.LENGTH_LONG).show()
         }
 
         override fun add(a: Int): Int {
