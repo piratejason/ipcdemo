@@ -16,12 +16,19 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
         <service
             android:name=".BookService"
-            android:enabled="true"
-            android:exported="true" >
+            android:exported="true">
             <intent-filter>
-                <action android:name="bookservice"/>
+                <action android:name="bookservice" />
+            </intent-filter>
+        </service>
+        <service
+            android:name=".crash.CrashService"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="crashservice" />
             </intent-filter>
         </service>
     </application>

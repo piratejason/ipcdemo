@@ -7,7 +7,7 @@ import com.lxch.p.Book
 import com.lxch.process.R
 import kotlinx.android.synthetic.main.activity_main.*
 
-class AidlMainActivity : AppCompatActivity(), ConnectCallback {
+class MainActivity : AppCompatActivity(), ConnectCallback {
     override fun success() {
         Toast.makeText(this, "success", Toast.LENGTH_LONG).show()
     }

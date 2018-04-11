@@ -8,9 +8,9 @@ import android.content.ServiceConnection
 import android.os.IBinder
 import com.lxch.p.IBookManager
 
-class BookServiceManager(var context: Context) {
+class BookServiceManager(private var context: Context) {
     private var service: IBookManager? = null
-    private var bindService = false
+    private var isConnecting = false
 
     companion object {
         private var instance: BookServiceManager? = null
@@ -27,9 +27,9 @@ class BookServiceManager(var context: Context) {
     }
 
     fun connectService() {
-        if (!bindService) {
+        if (!isConnecting) {
             var inn = createIntent()
-            bindService = context.bindService(Intent(inn), connection, Service.BIND_AUTO_CREATE)
+            isConnecting = context.bindService(Intent(inn), connection, Service.BIND_AUTO_CREATE)
         }
     }
 
