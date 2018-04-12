@@ -31,6 +31,13 @@
                 <action android:name="crashservice" />
             </intent-filter>
         </service>
+        <service
+            android:name=".chat.ChatService"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="ChatService" />
+            </intent-filter>
+        </service>
     </application>
 
 </manifest>

@@ -7,7 +7,7 @@ import android.util.Log
 import android.widget.Toast
 import com.lxch.p.ICrashExit
 
-var list = HashMap<IBinder, CrashService.Client>()
+private var list = HashMap<IBinder, CrashService.Client>()
 
 class CrashService : Service() {
     private var binder = object : ICrashExit.Stub() {
